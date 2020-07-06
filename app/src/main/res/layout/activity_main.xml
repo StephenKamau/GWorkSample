@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/materialTextView"
+        android:id="@+id/welcomeTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -24,7 +24,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialTextView">
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -44,11 +44,12 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/materialTextView2"
+                        android:id="@+id/exampleTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -69,40 +70,20 @@
                         android:text="@string/your_name_will_appear_here"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="?android:attr/textColorSecondary"
-                        app:layout_constraintEnd_toEndOf="@+id/materialTextView2"
-                        app:layout_constraintStart_toStartOf="@+id/materialTextView2"
-                        app:layout_constraintTop_toBottomOf="@+id/materialTextView2"
+                        app:layout_constraintEnd_toEndOf="@+id/exampleTextView"
+                        app:layout_constraintStart_toStartOf="@+id/exampleTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/exampleTextView"
                         tools:text="Student Name" />
 
-                    <Spinner
-                        android:id="@+id/spinner"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:spinnerMode="dropdown"
-                        app:layout_constraintEnd_toEndOf="@+id/materialTextView2"
-                        app:layout_constraintStart_toStartOf="@+id/materialTextView2"
-                        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/spinnerTextView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/spinner_example"
-                        android:textColor="@color/secondaryColor"
-                        app:layout_constraintEnd_toEndOf="@+id/spinner"
-                        app:layout_constraintTop_toBottomOf="@+id/spinner" />
-
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textInputLayout"
+                        android:id="@+id/nameTextInput"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:hint="@string/enter_your_name"
-                        app:layout_constraintEnd_toEndOf="@+id/materialTextView2"
-                        app:layout_constraintStart_toStartOf="@+id/materialTextView2"
-                        app:layout_constraintTop_toBottomOf="@+id/spinnerTextView">
+                        app:layout_constraintEnd_toEndOf="@+id/exampleTextView"
+                        app:layout_constraintStart_toStartOf="@+id/exampleTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/nameTextView">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
@@ -111,37 +92,61 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/materialTextView3"
+                        android:id="@+id/nameInputTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/textfield_example"
                         android:textColor="@color/secondaryColor"
-                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+                        app:layout_constraintEnd_toEndOf="@+id/nameTextInput"
+                        app:layout_constraintTop_toBottomOf="@+id/nameTextInput" />
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        style="@style/Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintEnd_toEndOf="@+id/exampleTextView"
+                        app:layout_constraintStart_toStartOf="@+id/exampleTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/nameInputTextView" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/spinnerTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/spinner_example"
+                        android:textColor="@color/secondaryColor"
+                        app:layout_constraintEnd_toEndOf="@+id/exampleTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
                     <com.google.android.material.button.MaterialButtonToggleGroup
                         android:id="@+id/materialButtonToggleGroup"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-                        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-                        app:layout_constraintTop_toBottomOf="@+id/materialTextView3">
+                        app:layout_constraintEnd_toEndOf="@+id/nameTextInput"
+                        app:layout_constraintStart_toStartOf="@+id/nameTextInput"
+                        app:layout_constraintTop_toBottomOf="@+id/spinnerTextView">
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/toggleButtonA"
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/light_a" />
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/toggleButtonB"
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/light_b" />
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/toggleButtonC"
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -149,80 +154,84 @@
                     </com.google.android.material.button.MaterialButtonToggleGroup>
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/materialTextView4"
+                        android:id="@+id/toggleButtonTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/toggle_button_example"
                         android:textColor="@color/secondaryColor"
-                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+                        app:layout_constraintEnd_toEndOf="@+id/nameTextInput"
                         app:layout_constraintTop_toBottomOf="@+id/materialButtonToggleGroup" />
 
                     <com.google.android.material.checkbox.MaterialCheckBox
-                        android:id="@+id/materialCheckBox"
+                        android:id="@+id/javaCheckBox"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="@string/java"
-                        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-                        app:layout_constraintTop_toBottomOf="@+id/materialTextView4" />
+                        app:layout_constraintStart_toStartOf="@+id/nameTextInput"
+                        app:layout_constraintTop_toBottomOf="@+id/toggleButtonTextView" />
 
                     <com.google.android.material.checkbox.MaterialCheckBox
-                        android:id="@+id/materialCheckBox2"
+                        android:id="@+id/kotlinCheckBox"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:text="@string/kotlin"
-                        app:layout_constraintStart_toEndOf="@+id/materialCheckBox"
-                        app:layout_constraintTop_toBottomOf="@+id/materialTextView4" />
+                        app:layout_constraintStart_toEndOf="@+id/javaCheckBox"
+                        app:layout_constraintTop_toBottomOf="@+id/toggleButtonTextView" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/materialTextView5"
+                        android:id="@+id/checkBoxTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="@string/checkbox_example"
                         android:textColor="@color/secondaryColor"
-                        app:layout_constraintBottom_toBottomOf="@+id/materialCheckBox2"
-                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-                        app:layout_constraintTop_toTopOf="@+id/materialCheckBox2" />
+                        app:layout_constraintBottom_toBottomOf="@+id/kotlinCheckBox"
+                        app:layout_constraintEnd_toEndOf="@+id/nameTextInput"
+                        app:layout_constraintTop_toTopOf="@+id/kotlinCheckBox" />
 
                     <RadioGroup
                         android:id="@+id/radioGroup"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-                        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-                        app:layout_constraintTop_toBottomOf="@+id/materialCheckBox">
+                        app:layout_constraintEnd_toEndOf="@+id/nameTextInput"
+                        app:layout_constraintStart_toStartOf="@+id/nameTextInput"
+                        app:layout_constraintTop_toBottomOf="@+id/javaCheckBox">
 
                         <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/maleRadioButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/male" />
 
                         <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/femaleRadioButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/female" />
 
                         <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/nonBinaryRadioButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/non_binary" />
                     </RadioGroup>
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/materialTextView6"
+                        android:id="@+id/radioButtonTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/radio_button_example"
                         android:textColor="@color/secondaryColor"
-                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+                        app:layout_constraintEnd_toEndOf="@+id/nameTextInput"
                         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/resetButton"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -230,9 +239,9 @@
                         android:layout_marginBottom="16dp"
                         android:text="@string/reset"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-                        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-                        app:layout_constraintTop_toBottomOf="@+id/materialTextView6" />
+                        app:layout_constraintEnd_toEndOf="@+id/nameTextInput"
+                        app:layout_constraintStart_toStartOf="@+id/nameTextInput"
+                        app:layout_constraintTop_toBottomOf="@+id/radioButtonTextView" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
