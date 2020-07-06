@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">GWork</string>
+    <string name="welcome_text">This App shows some of the basic controls in Android</string>
+    <string name="i_am_an_example_of_textview">TextView Example</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="textfield_example">TextField Example</string>
+    <string name="reset">Reset</string>
+    <string name="undo">Undo</string>
+    <string name="redo">Redo</string>
+    <string name="toggle_button_example">Toggle button example</string>
+    <string name="java">Java</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="checkbox_example">CheckBox example</string>
+    <string name="non_binary">Non binary</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="radio_button_example">Radio button example</string>
+    <string name="spinner_example">Spinner example</string>
+    <string name="light_a">Light A</string>
+    <string name="light_b">Light B</string>
+    <string name="light_c">Light C</string>
+    <string name="your_name_will_appear_here">Your name will appear here</string>
+</resources>
