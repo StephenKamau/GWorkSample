@@ -41,6 +41,18 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         binding.radioGroup.setOnCheckedChangeListener { _, id ->
             radioButtonHandler(id)
         }
+
+        //clear all selected items
+        binding.resetButton.setOnClickListener {
+            binding.nameTextView.text = getString(R.string.your_name_will_appear_here)
+            binding.nameTextInput.editText?.setText("")
+            binding.spinner.setSelection(0)
+            binding.materialButtonToggleGroup.clearChecked()
+            binding.javaCheckBox.isChecked = false
+            binding.kotlinCheckBox.isChecked = false
+            binding.radioGroup.clearCheck()
+            showSnackBar("All controls have been reset")
+        }
     }
 
     private fun radioButtonHandler(id: Int) {
