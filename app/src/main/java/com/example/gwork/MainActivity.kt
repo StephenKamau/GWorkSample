@@ -1,9 +1,9 @@
 package com.example.gwork
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.KeyEvent
-import android.view.View
+import android.view.*
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.example.gwork.databinding.ActivityMainBinding
@@ -53,6 +53,19 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             binding.radioGroup.clearCheck()
             showSnackBar("All controls have been reset")
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu_options, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.table_layout -> startActivity(Intent(this, FrameLayout::class.java))
+        }
+        return true
     }
 
     private fun radioButtonHandler(id: Int) {
