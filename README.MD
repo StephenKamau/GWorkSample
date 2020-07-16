@@ -4,8 +4,8 @@ An Android application to show basic controls.
 
 ## Demo
 
-|<img src="images/s1.png" width=200/>||<img src="images/s2.png" width=200/>||<img src="images/s3.png" width=200/>|
-|:----:||:----:||:----:|
+|<img src="images/s1.png" width=200/>|<img src="images/s2.png" width=200/>|<img src="images/s3.png" width=200/>|
+|:----:|:----:|:----:|
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
