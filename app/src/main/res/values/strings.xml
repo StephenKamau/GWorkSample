@@ -32,4 +32,16 @@
     <string name="_0">0</string>
     <string name="start_typing">0.</string>
     <string name="table_layout">Table layout</string>
+    <string name="title_activity_tab_layout">TabLayout</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="home">Home</string>
+    <string name="recents">Recents</string>
+    <string name="favourites">Favourites</string>
+    <string name="history">History</string>
+    <string name="tab_layout">Tab layout</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="this_fragment_uses_framelayout">This Fragment uses FrameLayout</string>
+    <string name="this_fragment_uses_relativelayout">This Fragment uses RelativeLayout</string>
+    <string name="this_fragment_uses_linearlayout">This Fragment uses LinearLayout</string>
 </resources>

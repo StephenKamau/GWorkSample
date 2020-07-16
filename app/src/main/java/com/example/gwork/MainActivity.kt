@@ -63,7 +63,8 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.table_layout -> startActivity(Intent(this, FrameLayout::class.java))
+            R.id.table_layout -> startActivity(Intent(this, TableLayout::class.java))
+            R.id.tab_layout -> startActivity(Intent(this, TabLayout::class.java))
         }
         return true
     }

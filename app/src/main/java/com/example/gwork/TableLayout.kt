@@ -2,14 +2,14 @@ package com.example.gwork
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.gwork.databinding.ActivityFrameLayoutBinding
+import com.example.gwork.databinding.ActivityTableLayoutBinding
 
-class FrameLayout : AppCompatActivity() {
+class TableLayout : AppCompatActivity() {
     private var digit = 0
-    private lateinit var binding: ActivityFrameLayoutBinding
+    private lateinit var binding: ActivityTableLayoutBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityFrameLayoutBinding.inflate(layoutInflater)
+        binding = ActivityTableLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
         title = "TableLayout Example"
         binding.buttonOne.setOnClickListener {
